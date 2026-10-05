@@ -2,12 +2,6 @@
   <img src="./assets/banner.svg" width="100%" alt="Numan Shaikh, Visual & Product Designer" />
 </a>
 
-<p align="center">
-  <a href="mailto:10shaikhnuman@gmail.com"><img src="https://img.shields.io/badge/Say_hello-10shaikhnuman%40gmail.com-8E6CF6?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Numan" /></a>
-  <img src="https://img.shields.io/badge/Open_to-Freelance_%26_Collabs-3DDC84?style=for-the-badge" alt="Open to freelance and collabs" />
-  <img src="https://img.shields.io/badge/Based_in-Pune%2C_India-FFB547?style=for-the-badge" alt="Based in Pune, India" />
-</p>
-
 <br />
 
 ## 👋 Hey, I'm Numan
