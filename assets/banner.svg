@@ -1,118 +1,87 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-label="Numan Shaikh, Visual and Product Designer, Pune, India. Open to freelance and collabs.">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="Numan Shaikh, Visual &amp; Product Designer">
   <defs>
-    <clipPath id="frame"><rect width="1200" height="420" rx="28"/></clipPath>
-    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="70"/></filter>
+    <clipPath id="frame"><rect width="1200" height="300" rx="18"/></clipPath>
+    <!-- Motion blur: strong along the x axis, almost none vertically -->
+    <filter id="motion" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="22 2.6"/></filter>
     <filter id="grain">
-      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/>
-      <feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.55 0"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.5 0"/>
     </filter>
-    <linearGradient id="title" x1="0" x2="1">
-      <stop offset="0" stop-color="#9FC0FF"/>
-      <stop offset="0.5" stop-color="#C3AEFF"/>
-      <stop offset="1" stop-color="#FFD674"/>
+
+    <linearGradient id="s1" gradientUnits="userSpaceOnUse" x1="0" x2="900">
+      <stop offset="0" stop-color="#0FA24F"/><stop offset="0.26" stop-color="#0FA24F"/>
+      <stop offset="0.40" stop-color="#A9D8BA"/><stop offset="0.52" stop-color="#45A6EA"/>
+      <stop offset="0.72" stop-color="#F1F0ED" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.22"/>
-      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.04"/>
+    <linearGradient id="s2" gradientUnits="userSpaceOnUse" x1="0" x2="900">
+      <stop offset="0" stop-color="#8ACBF3"/><stop offset="0.28" stop-color="#E4F1F8"/>
+      <stop offset="0.46" stop-color="#2E9BE2"/><stop offset="0.58" stop-color="#12A04E"/>
+      <stop offset="0.80" stop-color="#F1F0ED" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="rim" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.75"/>
-      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.08"/>
+    <linearGradient id="s3" gradientUnits="userSpaceOnUse" x1="0" x2="900">
+      <stop offset="0" stop-color="#5EB4EE"/><stop offset="0.22" stop-color="#EAF2F6"/>
+      <stop offset="0.42" stop-color="#1C9C50"/><stop offset="0.50" stop-color="#34A0E6"/>
+      <stop offset="0.70" stop-color="#F1F0ED" stop-opacity="0"/>
     </linearGradient>
-    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1.2" fill="#FFFFFF" fill-opacity="0.07"/>
-    </pattern>
+    <linearGradient id="s4" gradientUnits="userSpaceOnUse" x1="0" x2="900">
+      <stop offset="0" stop-color="#0E9A47"/><stop offset="0.20" stop-color="#0E9A47"/>
+      <stop offset="0.36" stop-color="#C3E5CD"/><stop offset="0.58" stop-color="#F1F0ED" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="s5" gradientUnits="userSpaceOnUse" x1="0" x2="900">
+      <stop offset="0" stop-color="#93CEF3"/><stop offset="0.30" stop-color="#EDF5F9"/>
+      <stop offset="0.48" stop-color="#2AAA5C"/><stop offset="0.60" stop-color="#0B8F43"/>
+      <stop offset="0.82" stop-color="#F1F0ED" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="s6" gradientUnits="userSpaceOnUse" x1="0" x2="900">
+      <stop offset="0" stop-color="#18A055"/><stop offset="0.18" stop-color="#7FC79B"/>
+      <stop offset="0.30" stop-color="#4DAAEA"/><stop offset="0.50" stop-color="#F1F0ED" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="glintGrad" x1="0" x2="1">
+      <stop offset="0" stop-color="#9FE3B8" stop-opacity="0"/><stop offset="0.5" stop-color="#E8FFF0" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#9FE3B8" stop-opacity="0"/>
+    </linearGradient>
+
     <style>
-      .sans { font-family: Inter, "SF Pro Display", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
-      .blob { transform-box: fill-box; transform-origin: center; }
-      .b1 { animation: drift1 14s ease-in-out infinite; }
-      .b2 { animation: drift2 18s ease-in-out infinite; }
-      .b3 { animation: drift3 16s ease-in-out infinite; }
-      .float1 { animation: float 7s ease-in-out infinite; }
-      .float2 { animation: float 7s ease-in-out -2.3s infinite; }
-      .float3 { animation: float 7s ease-in-out -4.6s infinite; }
-      .pulse { transform-box: fill-box; transform-origin: center; animation: pulse 2s ease-out infinite; }
-      .line { opacity: 0; animation: cycle 16s infinite; }
-      .l2 { animation-delay: 4s; } .l3 { animation-delay: 8s; } .l4 { animation-delay: 12s; }
-      .fade { animation: rise 1.2s cubic-bezier(.2,.7,.2,1) both; }
-      .d1 { animation-delay: .1s; } .d2 { animation-delay: .25s; } .d3 { animation-delay: .4s; } .d4 { animation-delay: .55s; }
-      @keyframes drift1 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(60px,40px) scale(1.15); } }
-      @keyframes drift2 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-70px,-30px) scale(.9); } }
-      @keyframes drift3 { 0%,100% { transform: translate(0,0); } 50% { transform: translate(40px,-50px); } }
-      @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-      @keyframes pulse { 0% { opacity: .7; transform: scale(1); } 100% { opacity: 0; transform: scale(2.6); } }
-      @keyframes cycle { 0% { opacity: 0; transform: translateY(8px); } 3%,22% { opacity: 1; transform: translateY(0); } 25%,100% { opacity: 0; transform: translateY(-8px); } }
-      @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+      .sans { font-family: "Helvetica Neue", Inter, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+      .drift { animation: drift 10s ease-in-out infinite; }
+      .d2 { animation-duration: 13s; animation-delay: -3s; }
+      .d3 { animation-duration: 11s; animation-delay: -6s; }
+      .d4 { animation-duration: 15s; animation-delay: -2s; }
+      .d5 { animation-duration: 12s; animation-delay: -8s; }
+      .d6 { animation-duration: 14s; animation-delay: -5s; }
+      .glint { animation: glint 8s cubic-bezier(.45,0,.25,1) infinite; }
+      @keyframes drift { 0%,100% { transform: translateX(0); } 50% { transform: translateX(46px); } }
+      @keyframes glint { 0% { transform: translateX(-260px); } 60%,100% { transform: translateX(1260px); } }
       @media (prefers-reduced-motion: reduce) {
-        .b1,.b2,.b3,.float1,.float2,.float3,.pulse,.fade { animation: none; }
-        .line { animation: none; } .l1 { opacity: 1; }
+        .drift, .glint { animation: none; } .glint { opacity: 0; }
       }
     </style>
   </defs>
 
   <g clip-path="url(#frame)">
-    <!-- Background, colored light, texture -->
-    <rect width="1200" height="420" fill="#0A0C1E"/>
-    <g filter="url(#soft)">
-      <circle class="blob b1" cx="180" cy="80" r="190" fill="#2F68F0" fill-opacity="0.75"/>
-      <circle class="blob b2" cx="980" cy="120" r="210" fill="#8E6CF6" fill-opacity="0.65"/>
-      <circle class="blob b3" cx="760" cy="430" r="170" fill="#FFB547" fill-opacity="0.35"/>
-      <circle class="blob b1" cx="1120" cy="380" r="140" fill="#86E6FF" fill-opacity="0.35"/>
-    </g>
-    <rect width="1200" height="420" fill="url(#dots)"/>
-    <rect width="1200" height="420" filter="url(#grain)" opacity="0.10"/>
+    <rect width="1200" height="300" fill="#F1F0ED"/>
 
-    <!-- Text -->
-    <g class="sans">
-      <text class="fade d1" x="72" y="104" fill="#FFFFFF" fill-opacity="0.6" font-size="15" font-weight="600" letter-spacing="4">HELLO, I'M</text>
-      <text class="fade d2" x="68" y="190" fill="#FFFFFF" font-size="84" font-weight="800" letter-spacing="-3">Numan Shaikh</text>
-      <text class="fade d3" x="72" y="240" fill="url(#title)" font-size="32" font-weight="700" letter-spacing="-0.5">Visual &amp; Product Designer</text>
-
-      <g class="fade d4" fill="#FFFFFF" fill-opacity="0.78" font-size="19" font-weight="500">
-        <text class="line l1" x="72" y="286">I design interfaces people enjoy using.</text>
-        <text class="line l2" x="72" y="286">I build brand identities that stick.</text>
-        <text class="line l3" x="72" y="286">I bring ideas to life with illustration &amp; motion.</text>
-        <text class="line l4" x="72" y="286">I turn designs into real tools, with code &amp; AI.</text>
-      </g>
-
-      <!-- Pills -->
-      <g class="fade d4">
-        <rect x="72" y="326" width="262" height="40" rx="20" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.18"/>
-        <circle class="pulse" cx="96" cy="346" r="6" fill="#3DDC84"/>
-        <circle cx="96" cy="346" r="6" fill="#3DDC84"/>
-        <text x="112" y="351.5" fill="#FFFFFF" font-size="15" font-weight="600">Open to freelance &amp; collabs</text>
-
-        <rect x="346" y="326" width="148" height="40" rx="20" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.18"/>
-        <path d="M372 336.5a7 7 0 0 0-7 7c0 5.2 7 11.5 7 11.5s7-6.3 7-11.5a7 7 0 0 0-7-7zm0 9.6a2.6 2.6 0 1 1 0-5.2 2.6 2.6 0 0 1 0 5.2z" fill="#FFD674"/>
-        <text x="386" y="351.5" fill="#FFFFFF" font-size="15" font-weight="600">Pune, India</text>
-      </g>
+    <!-- Light streaks -->
+    <g filter="url(#motion)">
+      <rect class="drift" x="-80" y="60" width="1200" height="30" fill="url(#s1)"/>
+      <rect class="drift d2" x="-80" y="90" width="1200" height="18" fill="url(#s2)"/>
+      <rect class="drift d3" x="-80" y="108" width="1200" height="36" fill="url(#s3)"/>
+      <rect class="drift d4" x="-80" y="144" width="1200" height="22" fill="url(#s4)"/>
+      <rect class="drift d5" x="-80" y="166" width="1200" height="42" fill="url(#s5)"/>
+      <rect class="drift d6" x="-80" y="208" width="1200" height="26" fill="url(#s6)"/>
     </g>
 
-    <!-- Glass cards: a little design board -->
-    <g transform="translate(790 70)">
-      <g class="float1">
-        <rect x="40" y="0" width="300" height="200" rx="26" fill="#FFD674" fill-opacity="0.22" stroke="url(#rim)" stroke-width="1.5" transform="rotate(-8 190 100)"/>
-      </g>
-      <g class="float2">
-        <rect x="20" y="40" width="300" height="200" rx="26" fill="#C3AEFF" fill-opacity="0.22" stroke="url(#rim)" stroke-width="1.5" transform="rotate(4 170 140)"/>
-      </g>
-      <g class="float3 sans">
-        <rect x="0" y="86" width="300" height="200" rx="26" fill="#141838" fill-opacity="0.72" stroke="url(#rim)" stroke-width="1.5"/>
-        <rect x="0" y="86" width="300" height="200" rx="26" fill="url(#glass)"/>
-        <text x="26" y="160" fill="#FFFFFF" font-size="54" font-weight="800" letter-spacing="-2">Aa</text>
-        <text x="28" y="186" fill="#FFFFFF" fill-opacity="0.55" font-size="12" font-weight="600" letter-spacing="2">TYPE · COLOR · MOTION</text>
-        <circle cx="44" cy="236" r="16" fill="#2F68F0"/>
-        <circle cx="84" cy="236" r="16" fill="#8E6CF6"/>
-        <circle cx="124" cy="236" r="16" fill="#FFD674"/>
-        <circle cx="164" cy="236" r="16" fill="#86E6FF"/>
-        <circle cx="204" cy="236" r="16" fill="#FFFFFF" fill-opacity="0.9"/>
-        <!-- cursor -->
-        <path d="M236 128 l0 34 l9-8 l7 15 l6-3 l-7-15 l12-1 z" fill="#FFFFFF" stroke="#0A0C1E" stroke-width="1.5" stroke-linejoin="round"/>
-        <rect x="250" y="168" width="44" height="22" rx="11" fill="#8E6CF6"/>
-        <text x="272" y="183" fill="#FFFFFF" font-size="11" font-weight="700" text-anchor="middle">You</text>
-      </g>
+    <!-- Horizon line -->
+    <rect x="0" y="246" width="1200" height="3" fill="#0E9A47"/>
+    <rect class="glint" x="0" y="244" width="240" height="7" fill="url(#glintGrad)"/>
+
+    <!-- Name -->
+    <g class="sans" text-anchor="end">
+      <text x="1124" y="158" fill="#2A2A28" font-size="46" font-weight="600" letter-spacing="-1.4">Numan Shaikh</text>
+      <text x="1124" y="190" fill="#8A8A85" font-size="17" font-weight="500" letter-spacing="0.4">Visual &amp; Product Designer</text>
     </g>
 
-    <rect x="0.75" y="0.75" width="1198.5" height="418.5" rx="27.5" fill="none" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="1.5"/>
+    <rect width="1200" height="300" filter="url(#grain)" opacity="0.05"/>
   </g>
 </svg>

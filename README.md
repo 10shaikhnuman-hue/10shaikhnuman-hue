@@ -1,5 +1,5 @@
 <a href="mailto:10shaikhnuman@gmail.com">
-  <img src="./assets/banner.svg" width="100%" alt="Numan Shaikh, Visual & Product Designer, Pune, India. Open to freelance & collabs." />
+  <img src="./assets/banner.svg" width="100%" alt="Numan Shaikh, Visual & Product Designer" />
 </a>
 
 <p align="center">
