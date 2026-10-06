@@ -71,17 +71,11 @@ def text(x, y, s, font, size, fill, anchor="start", extra=""):
                  f'text-anchor="{anchor}"{extra}>{esc(s)}</text>')
 
 def pill(cx, y, label):
-    w = 30 + 1 + 24 + 1 + width(label, "regular", 12) + 22
+    w = 22 + width(label, "regular", 12) + 22
     x = cx - w / 2
-    parts.append(f'<g class="pill"><rect x="{x:.1f}" y="{y}" width="{w:.1f}" height="30" rx="15" '
+    parts.append(f'<rect x="{x:.1f}" y="{y}" width="{w:.1f}" height="30" rx="15" '
                  f'fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.14"/>')
-    parts.append(f'<circle class="dot" cx="{x + 16:.1f}" cy="{y + 15}" r="4" fill="#7A7A80"/>')
-    parts.append(f'<line x1="{x + 30:.1f}" y1="{y + 9}" x2="{x + 30:.1f}" y2="{y + 21}" stroke="#FFFFFF" stroke-opacity="0.14"/>')
-    tx = x + 39
-    parts.append(f'<path d="M{tx:.1f} {y + 11} l6 4 l-6 4z" fill="#BDBDC2"/>')
-    parts.append(f'<line x1="{x + 55:.1f}" y1="{y + 9}" x2="{x + 55:.1f}" y2="{y + 21}" stroke="#FFFFFF" stroke-opacity="0.14"/>')
-    parts.append("</g>")
-    text(x + 64, y + 19.5, label, "regular", 12, "#BDBDC2")
+    text(cx, y + 19.5, label, "regular", 12, "#BDBDC2", anchor="middle")
 
 # --- hero
 y = 64
@@ -262,12 +256,10 @@ svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewB
     .bob {{ animation: bob 7s cubic-bezier(.3,0,.2,1) infinite; }}
     .ring {{ transform-origin: 600px 238px; animation: spin 40s linear infinite; }}
     .glow {{ animation: breathe 9s ease-in-out infinite; }}
-    .dot {{ animation: blink 3s ease-in-out infinite; }}
     @keyframes bob {{ 0%, 74%, 100% {{ transform: translateY(0); }} 80% {{ transform: translateY(-7px); }} 86% {{ transform: translateY(0); }} }}
     @keyframes spin {{ to {{ transform: rotate(360deg); }} }}
     @keyframes breathe {{ 0%, 100% {{ opacity: 1; }} 50% {{ opacity: 0.6; }} }}
-    @keyframes blink {{ 0%, 100% {{ fill: #7A7A80; }} 50% {{ fill: #3DDC84; }} }}
-    @media (prefers-reduced-motion: reduce) {{ .bob, .ring, .glow, .dot {{ animation: none; }} }}
+    @media (prefers-reduced-motion: reduce) {{ .bob, .ring, .glow {{ animation: none; }} }}
   </style>
 </defs>
 <g clip-path="url(#frame)">
